@@ -104,6 +104,30 @@ cfg.item_transformers = {
       }
 	 }
   },
+	
+	-- 2yys added Missing item
+  {
+    name="Airline Cargo", -- menu name
+	permissions = {"mission.pilot.cargo"}, -- you can add permissions
+    r=255,g=125,b=0, -- color
+    max_units=100000,
+    units_per_minute=2,
+    x=-922.93408203125,y=-2945.5681152344,z=13.945069313049,
+    radius=3, height=1.5, -- area
+    recipes = {
+      ["Gather Cargo"] = { -- action name
+       description="Grabbing Cargo.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+		["cargo"] = 1
+		}, -- items given per unit
+        aptitudes={} -- optional
+      }
+    }
+  },
+	
   {
     name="Water bottles/tacos tree", -- menu name
     -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
